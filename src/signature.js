@@ -58,6 +58,8 @@ angular.module('signature').directive('signaturePad', ['$interval', '$timeout', 
           };
 
           $scope.$watch("dataurl", function (dataUrl) {
+            // fix delete random canvas
+            return;
             if (!dataUrl || $scope.signaturePad.toDataURL() === dataUrl) {
               return;
             }
